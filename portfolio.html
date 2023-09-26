@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="portfolio.css" />
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#product">PRODUCT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">GALLERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">BLOG</a>
+                    </li>
+                    <li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#myinventory">MY INVENTORY</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ending navbar -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="https://i.pinimg.com/564x/42/74/10/427410978783ef280aa3220874c2ee5e.jpg" alt="Angeline"
+                    width="200" class="rounded-circle">
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex gap-5" style="margin-left: 50px;">
+                    <div class="person">
+                        <div class="person-image">
+                            <div class="card1">
+                                <div>
+                                    <h4>Angeline</h4>
+                                    <p>Web Developer</p>
+                                    <button type="submit" class="btn btn-primary">Kontak</button>
+                                    <button type="button" class="btn btn-outline-success">Resume</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sidebar-2">
+                        <div class="sdb-kiri" style="font-weight: bold;">
+                            <p>Availability</p>
+                            <p>Umur</p>
+                            <p>Lokasi</p>
+                            <p>Pengalaman</p>
+                            <p>Email</p>
+                        </div>
+                    </div>
+                    <div id="sidebar-3">
+                        <div class="sdb-kiri-1">
+                            <p id="text-availability">Full Time</p>
+                            <p id="text-umur">20 Tahun</p>
+                            <p id="text-lokasi">Bali, Indonesia</p>
+                            <p id="text-pengalaman">1</p>
+                            <p id="text-email">angeline@gmail.com</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="background-color: rgb(255, 255, 255);">
+        <div class="card-body">
+
+            <section>
+                <div class="container" id="form">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="inputname">
+                        </div>
+                        <div class="mb-3">
+                            <label for="role">Role</label>
+                            <input type="text" class="form-control" id="inputrole">
+                        </div>
+                        <div class="mb-3">
+                            <label for="availability">Availability</label>
+                            <input type="text" class="form-control" id="inputavailability">
+                        </div>
+                        <div class="mb-3">
+                            <label for="age">Age</label>
+                            <input type="text" class="form-control" id="inputage">
+                        </div>
+                        <div class="mb-3">
+                            <label for="lokasi">Lokasi</label>
+                            <input type="text" class="form-control" id="inputlokasi">
+                        </div>
+                        <div class="mb-3">
+                            <label for="yearsexperience">Years Experience</label>
+                            <input type="text" class="form-control" id="inputyearsexperience">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="inputemail">
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+
+            </section>
+        </div>
+    </div>
+    <div class="align-middle text-center mt-5">
+        <div class="card-footer">
+            <large class="text-body-secondary">Created by Angeline ⭐</large>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('form');
+            
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                
+                // Mengambil nilai dari input form
+                const name = document.getElementById('inputname').value;
+                const role = document.getElementById('inputrole').value;
+                const availability = document.getElementById('inputavailability').value;
+                const age = document.getElementById('inputage').value;
+                const lokasi = document.getElementById('inputlokasi').value;
+                const yearsExperience = document.getElementById('inputyearsexperience').value;
+                const email = document.getElementById('inputemail').value;
+    
+                // Mengganti nilai di halaman dengan data dari form
+                document.getElementById('text-availability').textContent = availability;
+                document.getElementById('text-umur').textContent = age + ' Tahun';
+                document.getElementById('text-lokasi').textContent = lokasi;
+                document.getElementById('text-pengalaman').textContent = yearsExperience;
+                document.getElementById('text-email').textContent = email;
+    
+                // Mengganti nama dan role di bagian atas
+                document.querySelector('h4').textContent = name;
+                document.querySelector('p').textContent = role;
+    
+                // Hapus nilai dari form
+                form.reset();
+            });
+        });
+    </script>
+        
+</body>
+
+</html>
